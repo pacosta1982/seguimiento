@@ -6,11 +6,14 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    @yield('style')
     <title>{{ config('app.name', 'Laravel') }}</title>
+    <script src="{{ asset('js/fullcalendar.min.js') }}"></script>   
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
+    
+    
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -18,6 +21,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link src="{{ asset('js/fullcalendar.css') }}"> 
 </head>
 <body>
     <div id="app">
@@ -77,4 +81,6 @@
         </main>
     </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+@yield('script')
 </html>
