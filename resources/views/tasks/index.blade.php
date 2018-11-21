@@ -9,6 +9,7 @@
 @stop
 
 @section('content')
+
 <div class="row">
     <div class="col-md-3">
         <div class="box box-primary">
@@ -26,6 +27,17 @@
                             <div class="form-group">
                                 <label for="description">Descripción:</label>
                                 <input type="textarea" class="form-control" name="description" placeholder="Ingrese Descripción (Opcional)">
+                            </div>
+                            <div class="form-group">
+                                <label>Inspector</label>
+                                <select class="form-control required" name="user_id" id="user_id">
+                                    <option value="" >Seleccione una opcion</option>
+                                    @foreach($user as $us)
+        
+                                    <option value="{{$us->id}}"
+                                    >{{$us->name}} </option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="form-group">
                                 <label for="task_date">Fecha:</label>

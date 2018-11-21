@@ -21,3 +21,18 @@
 
 @include('dashboard.map')
 @stop
+@section('css')
+
+@stop
+
+@section('js')
+    
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+</script> 
+@stop
+
+

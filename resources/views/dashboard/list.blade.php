@@ -10,28 +10,40 @@
     </div>
     <!-- /.box-header -->
     <div class="box-body">
-      <div class="table-responsive">
-        <table class="table no-margin">
-          <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Departamento</th>
-            <th class="text-center">Etapa</th>
-          </tr>
-          </thead>
-          <tbody>
-
-          </tbody>
+        <table id="example" class="table" style="width:100%">
+            <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Departamento</th>
+                  <th class="text-center">Etapa</th>
+                </tr>
+                </thead>
+            <tbody>
+                @foreach($projects as $project)  
+              <tr>
+                <td><a href="l">{!! $project->id !!}</a></td>
+                <td>{!! $project->name !!}</td>
+                <td></td>
+                <td class="text-center">
+                    <span class="label label-success">
+                        {{ App\Project::getStatus($project->id)  }}
+                    </span>
+                </td>
+              </tr>
+             @endforeach
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th>ID</th>
+                  <th>Nombre</th>
+                  <th>Departamento</th>
+                  <th class="text-center">Etapa</th>
+                </tr>
+            </tfoot>
         </table>
-      </div>
       <!-- /.table-responsive -->
     </div>
     <!-- /.box-body -->
-    <div class="box-footer clearfix">
-        <a role="button" class="btn btn-info pull-right" style="margin-right: 5px;" href="">
-             <i class="fa fa-search"></i> Ver Todos Los Proyectos
-            </a>
-    </div>
     <!-- /.box-footer -->
   </div>

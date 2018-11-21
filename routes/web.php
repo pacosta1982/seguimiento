@@ -21,3 +21,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('dashboard', 'DashBoardController');
 Route::resource('tasks', 'TasksController');
+Route::resource('projects', 'ProjectController');
+
+
+Route::get('/import', 'ImportController@import');
+Route::get('/importestates', 'ImportController@importestates');
+Route::get('/importstatus', 'ImportController@importstatus');

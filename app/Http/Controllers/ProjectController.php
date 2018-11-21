@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Project;
 
 use Illuminate\Http\Request;
-use App\Task;
-use App\User;
 
-class TasksController extends Controller
+class ProjectController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,10 +14,10 @@ class TasksController extends Controller
      */
     public function index()
     {
-        $tasks = Task::all();
-        $title = "Calendario Tareas";
-        $user = User::all();
-        return view('tasks.index', compact('tasks','title','user'));
+        $title="Lista de Proyectos";
+        $projects = Project::all();
+        //Mapper::map(-24.3697635, -56.5912129, ['zoom' => 6, 'type' => 'ROADMAP']);
+        return view('projects.index',compact('projects','title'));
     }
 
     /**
@@ -28,7 +27,7 @@ class TasksController extends Controller
      */
     public function create()
     {
-        return view('tasks.create');
+        //
     }
 
     /**
@@ -39,9 +38,7 @@ class TasksController extends Controller
      */
     public function store(Request $request)
     {
-        //var_dump($request->all());
-        Task::create($request->all());
-        return redirect()->route('tasks.index');
+        //
     }
 
     /**
