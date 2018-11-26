@@ -7,11 +7,19 @@
     <h1>{!! $title !!}</h1>
 @stop
 
+@section('breadcrumb')
+    <ol class="breadcrumb breadcrumb-2">
+        <li><a href="{{url('home')}}"><i class="fa fa-home"></i>Inicio</a></li>
+        <li class="active"><strong>{!! $title !!}</strong></li>
+    </ol>
+@endsection
+
 @section('content')
 
 <div class="box box-info">
         <div class="box-header with-border">
-          <h3 class="box-title">Ultimos Proyectos</h3>
+            <h3 class="box-title">Ultimos Proyectos</h3>  
+            <a class="btn btn-primary pull-right" href="{!! action('ProjectController@create') !!}"><i class="fa fa-plus-circle"></i> Agregar</a>
         </div>
         <!-- /.box-header -->
         <div class="box-body">
@@ -43,8 +51,8 @@
                             <a href="#/" data-toggle="dropdown"     ><i class="fa fa-fw fa-list-ul"></i></a>
                             <ul class="dropdown-menu dropdown-menu-right">
                                 <li><a href="">Ver</a></li>
-                                <li><a href="">Editar</a></li>
-                                <li><a href="">Documentos</a></li>
+                                <li><a href="{!! action('ProjectController@edit', ['id'=>$project->id]) !!}">Editar</a></li>
+                                <li><a href="{!! action('ProjectController@files', ['id'=>$project->id]) !!}">Documentos</a></li>
                                 <li><a href="">Propiedades</a></li>
                             </ul>
                         </div>

@@ -21,9 +21,25 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('dashboard', 'DashBoardController');
 Route::resource('tasks', 'TasksController');
+
+
 Route::resource('projects', 'ProjectController');
+
+Route::get('projects/ajax/{state_id?}/cities', 'ProjectController@cities');
+Route::get('projects/ajax/{city_id?}/neighborhood', 'ProjectController@neighborhoods');
+
+Route::get('projects/{id}/files', 'ProjectController@files');
+
+Route::post('file/upload', 'ProjectController@storeFile');
+Route::post('upload_file_proyecto', 'FileController@upload')->name('upload_file_proyecto');
+
+Route::get('/generate_pdf/{id?}/{file?}', 'FileController@generate_pdf');
+Route::get ('github', 'FileController@github');
 
 
 Route::get('/import', 'ImportController@import');
+
+
+
 Route::get('/importestates', 'ImportController@importestates');
 Route::get('/importstatus', 'ImportController@importstatus');

@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class Project extends Model
 {
-    protected $fillable = ['id','name', 'number_of_households'];
+    protected $fillable = ['name', 'number_of_households'];
 
 
     public static function getStatus($id) {

@@ -124,6 +124,16 @@ return [
             'url'  => 'projects',
             'icon' => 'home',
         ],
+        [
+            'text' => 'Crear Proyecto',
+            'url'  => 'projects/create',
+            'icon' => 'cog',
+        ],
+        [
+            'text' => 'Editar Proyecto',
+            'url'  => 'projects/edit',
+            'icon' => 'edit',
+        ],
         
         'Planificación',
         [

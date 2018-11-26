@@ -12,10 +12,13 @@
         "cornford/googlmapper": "2.*",
         "fideloper/proxy": "^4.0",
         "jeroennoten/laravel-adminlte": "^1.24",
+        "kyslik/column-sortable": "5.7.*",
         "laravel/framework": "5.7.*",
         "laravel/passport": "^7.0",
         "laravel/tinker": "^1.0",
-        "maatwebsite/excel": "^3.1"
+        "maatwebsite/excel": "^3.1",
+        "mpdf/mpdf": "^7.1",
+        "niklasravnsborg/laravel-pdf": "^3.0"
     },
     "require-dev": {
         "backpack/generators": "^1.2",
