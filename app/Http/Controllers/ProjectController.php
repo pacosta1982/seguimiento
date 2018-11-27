@@ -110,7 +110,11 @@ class ProjectController extends Controller
      */
     public function show($id)
     {
-        //
+        $title = "Resumen de Proyecto";
+        $project = Project::find($id);
+        //$project = Project::find($id);
+        $files = File::where('project_id', $id)->get();
+        return view('projects.show',compact('project', 'title','files'));
     }
 
     /**

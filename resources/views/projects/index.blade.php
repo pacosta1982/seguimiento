@@ -50,10 +50,11 @@
                         <div class="dropdown">
                             <a href="#/" data-toggle="dropdown"     ><i class="fa fa-fw fa-list-ul"></i></a>
                             <ul class="dropdown-menu dropdown-menu-right">
-                                <li><a href="">Ver</a></li>
+                                <li><a href="{!! action('ProjectController@show', ['id'=>$project->id]) !!}">Ver</a></li>
                                 <li><a href="{!! action('ProjectController@edit', ['id'=>$project->id]) !!}">Editar</a></li>
                                 <li><a href="{!! action('ProjectController@files', ['id'=>$project->id]) !!}">Documentos</a></li>
                                 <li><a href="">Propiedades</a></li>
+                                <li><a href="{!! action('ReportController@index', ['id'=>$project->id]) !!}">Informes</a></li>
                             </ul>
                         </div>
                     </td>

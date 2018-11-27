@@ -25,16 +25,24 @@ Route::resource('tasks', 'TasksController');
 
 Route::resource('projects', 'ProjectController');
 
+//Route::resource('informes', 'ProjectController');
+
 Route::get('projects/ajax/{state_id?}/cities', 'ProjectController@cities');
 Route::get('projects/ajax/{city_id?}/neighborhood', 'ProjectController@neighborhoods');
 
 Route::get('projects/{id}/files', 'ProjectController@files');
+
+//Informes
+Route::get('projects/{id}/informes', 'ReportController@index');
+Route::get('projects/{id}/informes/{idvisita}', 'ReportController@show');
 
 Route::post('file/upload', 'ProjectController@storeFile');
 Route::post('upload_file_proyecto', 'FileController@upload')->name('upload_file_proyecto');
 
 Route::get('/generate_pdf/{id?}/{file?}', 'FileController@generate_pdf');
 Route::get ('github', 'FileController@github');
+
+Route::get('/chartPdf', 'ChartController@index');
 
 
 Route::get('/import', 'ImportController@import');

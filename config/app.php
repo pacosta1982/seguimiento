@@ -175,7 +175,8 @@ return [
         JeroenNoten\LaravelAdminLte\ServiceProvider::class,
         Cornford\Googlmapper\MapperServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
-        niklasravnsborg\LaravelPdf\PdfServiceProvider::class
+        niklasravnsborg\LaravelPdf\PdfServiceProvider::class,
+        Barryvdh\Snappy\ServiceProvider::class,
 
     ],
 
@@ -228,7 +229,9 @@ return [
         'Mapper' => Cornford\Googlmapper\Facades\MapperFacade::class,
         'Excel' => Maatwebsite\Excel\Facades\Excel::class,
         // ...
-	    'PDF' => niklasravnsborg\LaravelPdf\Facades\Pdf::class
+        'PDF' => niklasravnsborg\LaravelPdf\Facades\Pdf::class,
+        //'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
+        'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
 
     ],
 
