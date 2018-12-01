@@ -13,8 +13,8 @@
         
         <td>{!! $inf->fecha_visita !!}</td>
         <td class="dt-center">
-            <a href="" class="announce"> 
-                <button class="btn btn-primary" type="button">Fiscalizar</button>
+            <a href="{!! action('ViviendaController@index', ['id'=>$inf->project_id,'idvisita'=>$inf->id, 'idvivienda' => $inf->id]) !!}" class="announce"> 
+                <button class="btn btn-primary" hr type="button">Fiscalizar</button>
             </a>
         </td>
         </tr>

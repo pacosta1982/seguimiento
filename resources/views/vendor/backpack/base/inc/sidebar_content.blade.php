@@ -9,3 +9,7 @@
       <li><a href="{{ backpack_url('permission') }}"><i class="fa fa-key"></i> <span>Permissions</span></a></li>
     </ul>
   </li>
+<li><a href='{{ backpack_url('category') }}'><i class='fa fa-gear'></i> <span>Categorias</span></a></li>
+<li><a href='{{ backpack_url('items') }}'><i class='fa fa-tag'></i> <span>Rubros</span></a></li>
+<li><a href='{{ backpack_url('proyrubro') }}'><i class='fa fa-tag'></i><span>Rubros Proyectos</span></a></li>
+<li><a href='{{ backpack_url('unidad') }}'><i class='fa fa-tag'></i><span>Unidades</span></a></li>

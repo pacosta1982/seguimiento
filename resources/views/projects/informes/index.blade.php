@@ -54,8 +54,6 @@
             </table>
         </div>
       </div>
-
-
 @stop
 @section('css')
 <style>

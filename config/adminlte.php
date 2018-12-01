@@ -141,6 +141,11 @@ return [
             'url'  => 'tasks',
             'icon' => 'calendar',
         ],
+        [
+            'text' => 'Rubros Proyectos',
+            'url'  => 'proyrubro',
+            'icon' => 'address-book',
+        ],
         
     ],
 
