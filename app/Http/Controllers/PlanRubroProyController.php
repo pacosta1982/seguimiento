@@ -69,6 +69,7 @@ class PlanRubroProyController extends Controller
         $unidades = UnidadMedida::all();
         $rubros = ProjectRubro::join('items', 'proyecto_rubro.item_id', '=', 'items.id')
         ->where('project_id', $id)
+        ->orderby('category_id')
         ->get();
         return view('planrubro.show',compact('project','title','statesInit','unidades','rubros'));
     }

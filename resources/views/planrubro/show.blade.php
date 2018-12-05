@@ -97,41 +97,65 @@
                                     <tbody>
                                         @php
                                             $aux=0;
+                                            $total=0;
+                                            $totalObra=0;
                                         @endphp
 
                                         @foreach($rubros as $ru)
                                             @if ($ru->category_id !== $aux)
-                                                <tr data-toggle="collapse" data-target="#demo1" class="accordion-toggle">
-                                                    <td class="bg-green color-palette">{!! $ru->category_id?$ru->state->categoria->name:"" !!}</td>
-                                                    <td class="text-center bg-green"></td>
-                                                    <td class="text-center bg-green"></td>
-                                                    <td class="text-center bg-green"></td>
-                                                    <td class="text-center bg-green"><button class="btn btn-default btn-xs"><span class="glyphicon glyphicon-eye-open"></span></button></td>
-                                                    
+                                            @if ($aux != 0)
+                                            <tr class="header">
+                                                <td class="total"></td>
+                                                <td class="text-center total"></td>
+                                                <td class="text-center total"></td>
+                                                <td class="text-center total">Total:</td>
+                                                <td class="text-center total">{!! number_format($total,0,'.','.') !!}</td> 
+                                            </tr>
+                                            @php
+                                                $total=0;
+                                            @endphp
+                                            @endif
+                                                <tr class="header">
+                                                    <td class="bg-light-blue-active color-palette">{!! $ru->category_id?$ru->state->categoria->name:"" !!}</td>
+                                                    <td class="text-center bg-light-blue-active color-palette"></td>
+                                                    <td class="text-center bg-light-blue-active color-palette"></td>
+                                                    <td class="text-center bg-light-blue-active color-palette"></td>
+                                                    <td class="text-center bg-light-blue-active color-palette"></i></td> 
                                                 </tr>
                                                 @php
                                                     $aux=$ru->category_id;
                                                 @endphp
                                             @endif
-                                            <tr>
-                                                    <td colspan="12" class="hiddenRow"><div class="accordian-body collapse" id="demo1"> 
-                                                      s
-                                                      
-                                                      </div> </td>
-                                                    </tr>   
+                                              <tr >
+                                                <td>{!! $ru->item_id?$ru->state->name:"" !!}</td>
+                                                <td class="text-center">{!! $ru->unidad_id?$ru->unidad->name:"" !!}</td>
+                                                <td class="text-center">{!! $ru->quantity !!}</td>
+                                                <td class="text-center">{!! number_format($ru->unit_price,0,'.','.') !!}</td>
+                                                <td class="text-center">{!! number_format(($ru->unit_price * $ru->quantity),0,'.','.') !!}</td>
+                                              </tr>
+                                          @php
+                                              $total+=$ru->unit_price * $ru->quantity;
+                                              $totalObra+=$ru->unit_price * $ru->quantity;
+                                          @endphp
                                           
-                                            <td>{!! $ru->item_id?$ru->state->name:"" !!}</td>
-                                            <td class="text-center">{!! $ru->unidad_id?$ru->unidad->name:"" !!}</td>
-                                            <td class="text-center">{!! $ru->quantity !!}</td>
-                                            <td class="text-center">{!! $ru->unit_price !!}</td>
-                                            <td class="text-center">{!! $ru->unit_price * $ru->quantity !!}</td>
-
                                      @endforeach
+                                     <tr class="header">
+                                        <td class="total"></td>
+                                        <td class="text-center total"></td>
+                                        <td class="text-center total"></td>
+                                        <td class="text-center total">Total:</td>
+                                        <td class="text-center total">{!! number_format($total,0,'.','.') !!}</td> 
+                                    </tr>
+                                    <tr class="header">
+                                        <td class="totalobra"></td>
+                                        <td class="text-center totalobra"></td>
+                                        <td class="text-center totalobra"></td>
+                                        <td class="text-center totalobra">Total Obra:</td>
+                                        <td class="text-center totalobra">{!! number_format($totalObra,0,'.','.') !!}</td> 
+                                    </tr>
                                     </tbody>
                                     <tfoot>
-                                        <tr>
-                                          
-                                        </tr>
+                                            
                                     </tfoot>
                                 </table>
                         
@@ -145,11 +169,42 @@
 
 @endsection
 
+@section('css')
+
+<style>
+
+.total{
+    font-weight: bold;
+    
+}
+
+.totalobra{
+    font-weight: bold;
+    background-color: azure;  
+}
+
+</style>
+    
+@endsection
+
 @section('js')
 <script src="{{asset('js/jquery.validate.min.js')}}"></script>
 <script src="{{asset('js/jquery.numeric.js')}}"></script>
 
-
+<script>
+$(document).ready(function() {
+  //Fixing jQuery Click Events for the iPad
+  var ua = navigator.userAgent,
+    event = (ua.match(/iPad/i)) ? "touchstart" : "click";
+  if ($('.table').length > 0) {
+    $('.table .header').on(event, function() {
+      $(this).toggleClass("active", "").nextUntil('.header').css('display', function(i, v) {
+        return this.style.display === 'table-row' ? 'none' : 'table-row';
+      });
+    });
+  }
+})
+</script>
 
 <script type="text/javascript">
 $("#quantity").numeric({ decimalPlaces: 2 });

@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Project;
 use App\Informe;
 use App\ImageGallery;
+use App\Models\ProjectRubro;
 
 class ViviendaController extends Controller
 {
@@ -22,8 +23,19 @@ class ViviendaController extends Controller
         $images = ImageGallery::get();
         //$projects = Project::all();
         $informe = Informe::where('project_id', $id)->get();
+        $rubros = ProjectRubro::join('items', 'proyecto_rubro.item_id', '=', 'items.id')
+        ->where('project_id', $id)
+        ->orderby('category_id')
+        ->get();
+
+        /*$rubros = ProjectRubro::join('items', 'proyecto_rubro.item_id', '=', 'items.id')
+        ->groupBy('items.category_id')
+        ->select('proyecto_rubro.*') // stop the joined table from overwriting columns with the same name
+        ->with('items') 
+        ->orderBy('category_id', 'asc')
+        ->get();*/
         //Mapper::map(-24.3697635, -56.5912129, ['zoom' => 6, 'type' => 'ROADMAP']);
-        return view('projects.informes.secciones.vivienda.index',compact('project','title','informe','images'));
+        return view('projects.informes.secciones.vivienda.index',compact('project','title','informe','images','rubros'));
     }
 
     /**

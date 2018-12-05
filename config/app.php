@@ -177,6 +177,7 @@ return [
         Maatwebsite\Excel\ExcelServiceProvider::class,
         niklasravnsborg\LaravelPdf\PdfServiceProvider::class,
         Barryvdh\Snappy\ServiceProvider::class,
+        OwenIt\Auditing\AuditingServiceProvider::class,
 
     ],
 

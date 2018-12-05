@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Project;
 use App\Informe;
+use App\Models\ProjectRubro;
 
 class ReportController extends Controller
 {
@@ -59,6 +60,8 @@ class ReportController extends Controller
         //$informecasa = Informe::find($idvisita);
         //$project = Project::find($id);
         $informecasa = Informe::where('project_id', $id)->get();
+
+        
         return view('projects.informes.show',compact('project', 'title','informe', 'informecasa'));
     }
 
