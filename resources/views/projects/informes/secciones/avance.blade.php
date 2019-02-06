@@ -9,12 +9,12 @@
     <tbody>
         @foreach($informecasa as $inf)  
         <tr>
-        <td>Informe de Obra N° {!! $inf->num_vista !!}</td>
+        <td>Informe de Obra N° {!! $inf->name !!}</td>
         
         <td>{!! $inf->fecha_visita !!}</td>
         <td class="dt-center">
             <a href="{!! action('ViviendaController@index', ['id'=>$inf->project_id,'idvisita'=>$inf->id, 'idvivienda' => $inf->id]) !!}" class="announce"> 
-                <button class="btn btn-primary" hr type="button">Fiscalizar</button>
+                <button class="btn btn-primary" hr type="button">Verificar</button>
             </a>
         </td>
         </tr>

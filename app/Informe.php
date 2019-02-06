@@ -8,5 +8,5 @@ class Informe extends Model
 {
     protected $table = 'informes_visitas';
     
-    protected $fillable = ['project_id', 'num_visita','fecha_visita'];
+    protected $fillable = ['project_id', 'num_vista','fecha_visita'];
 }

@@ -11,6 +11,7 @@
 <div class="box box-solid box-primary">
         <div class="box-header">
           <h3 class="box-title">Proyecto: {!! $project->name !!}</h3>
+          <h3 class="box-title pull-right">Programa: {!! $project->program_id?$project->programa->name:"" !!}</h3>
         </div><!-- /.box-header -->
         <div class="box-body">
                 <div class="row invoice-info">
@@ -29,6 +30,10 @@
                             {{ App\Project::getStatus($project->id)}}
                           </strong>
                           </address>
+                          <a href="{!! action('ProjectController@generarviviendas', ['id'=>$project->id]) !!}">
+                            <button class="btn btn-primary"  type="button">Generar Viviendas</button>
+                          </a>
+                          
                         </div>
                         <div class="col-sm-6 invoice-col">
                            <div style="width: 100%; height: 200px;">
@@ -51,7 +56,6 @@
                 <ul class="nav nav-tabs">
                   <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="true">Informes de Supervición</a></li>
                   <li class=""><a href="#tab_2" data-toggle="tab" aria-expanded="false">Documentos</a></li>
-                  <li class=""><a href="#tab_3" data-toggle="tab" aria-expanded="false">Varios</a></li>
                 </ul>
                 <div class="tab-content">
                   <div class="tab-pane active" id="tab_1">
@@ -62,9 +66,7 @@
                         @include('projects.resumen.documentos')
                   </div>
                   <!-- /.tab-pane -->
-                  <div class="tab-pane" id="tab_3">
-                    
-                  </div>
+
                   <!-- /.tab-pane -->
                 </div>
                 <!-- /.tab-content -->

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Project;
 use App\Informe;
+use App\Viviendas;
 use App\Models\ProjectRubro;
 
 class ReportController extends Controller
@@ -22,7 +23,8 @@ class ReportController extends Controller
         //$projects = Project::all();
         $informe = Informe::where('project_id', $id)->get();
         //Mapper::map(-24.3697635, -56.5912129, ['zoom' => 6, 'type' => 'ROADMAP']);
-        return view('projects.informes.index',compact('projects','title','informe'));
+        return view('projects.informes.index',compact('project','title','informe'));
+        
     }
 
     /**
@@ -30,9 +32,14 @@ class ReportController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id)
     {
         //
+        $project = Project::find($id);
+        $title="Lista de Informes de Obra del Proyecto ".$project->name;
+        //$projects = Project::all();
+        $informe = Informe::where('project_id', $id)->count();
+        return view('projects.informes.create',compact('project','title','informe'));
     }
 
     /**
@@ -44,6 +51,13 @@ class ReportController extends Controller
     public function store(Request $request)
     {
         //
+        Informe::create($request->all());
+        $project = Project::find($request->project_id);
+        $title="Lista de Informes de Obra del Proyecto ".$project->name;
+        //$projects = Project::all();
+        $informe = Informe::where('project_id', $project->id)->get();
+        //return view('projects.informes.index',compact('project','title','informe'));
+        return redirect('projects/'.$request->project_id.'/informes')->with('status', 'Se ha agregado un Archivo!');
     }
 
     /**
@@ -57,9 +71,11 @@ class ReportController extends Controller
         $title = "Resumen Visita";
         $project = Project::find($id);
         $informe = Informe::find($idvisita);
+        $informecasa = Viviendas::where('project_id', $project->id);
+        //var_dump($informecasa);
         //$informecasa = Informe::find($idvisita);
         //$project = Project::find($id);
-        $informecasa = Informe::where('project_id', $id)->get();
+        //$informecasa = Informe::where('project_id', $id)->get();
 
         
         return view('projects.informes.show',compact('project', 'title','informe', 'informecasa'));

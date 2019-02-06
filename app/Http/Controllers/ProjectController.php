@@ -8,6 +8,8 @@ use App\City;
 use App\User;
 use App\File;
 use App\Status;
+use App\Informe;
+use App\Viviendas;
 use Auth;
 use Redirect;
 use Illuminate\Support\Facades\DB;
@@ -114,7 +116,25 @@ class ProjectController extends Controller
         $project = Project::find($id);
         //$project = Project::find($id);
         $files = File::where('project_id', $id)->get();
-        return view('projects.show',compact('project', 'title','files'));
+        $informe = Informe::where('project_id', $id)->get();
+        return view('projects.show',compact('project', 'title','files','informe'));
+    }
+
+    public function generarviviendas($id){
+
+        $project = Project::find($id);
+        $count = Viviendas::where('project_id', $project->id)->count();
+        if ($count <= 0) {
+            for ($i=0; $i < $project->number_of_households; $i++) { 
+                //Viviendas::create
+                $vivienda = new Viviendas;
+                $vivienda->name = $i+1;
+                $vivienda->status = true;
+                $vivienda->project_id = $project->id;
+                $vivienda->save();
+            }
+        }
+        return redirect()->back();
     }
 
     /**

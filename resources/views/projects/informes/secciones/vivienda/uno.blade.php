@@ -1,222 +1,92 @@
-
-    
-    <div class="box box-solid box-primary">
-        <div class="box-header">
-            <h3 class="box-title">Preparación de obra</h3>
-        </div>
-        <div class="box-body">
-                <div class="row">
-                        <div class="col-md-4">
-                          <div class="form-group">
-                              <label class="control-label">Limpieza y preparación de obra</label>
-                              <select class="form-control" name="q01" id="q01">
-                                    <option value="" >Seleccione una opción</option>
-                                    <option value="0">0 %</option>
-                                    <option value="10">10 %</option>
-                                    <option value="20">20 %</option>
-                                    <option value="30">30 %</option>
-                                    <option value="40">40 %</option>
-                                    <option value="50">50 %</option>
-                                    <option value="60">60 %</option>
-                                    <option value="70">70 %</option>
-                                    <option value="80">80 %</option>
-                                    <option value="90">90 %</option>
-                                    <option value="100">100 %</option>
-                              </select>
-                          </div>
-                        </div>
-                        <div class="col-md-4">
-                                <div class="form-group">
-                                    <label class="control-label">Replanteo y marcación de obra</label>
-                                    <select class="form-control" name="q02" id="q02">
-                                            <option value="" >Seleccione una opción</option>
-                                            <option value="0">0 %</option>
-                                            <option value="10">10 %</option>
-                                            <option value="20">20 %</option>
-                                            <option value="30">30 %</option>
-                                            <option value="40">40 %</option>
-                                            <option value="50">50 %</option>
-                                            <option value="60">60 %</option>
-                                            <option value="70">70 %</option>
-                                            <option value="80">80 %</option>
-                                            <option value="90">90 %</option>
-                                            <option value="100">100 %</option>
-                                      </select>
-                                </div>
-                              </div>
-                        <div class="col-md-4">
-                          <div class="form-group">
-                            <label>Cartel de Obra</label>
-                            <select class="form-control" name="q03" id="q03">
-                                    <option value="" >Seleccione una opción</option>
-                                    <option value="0">0 %</option>
-                                    <option value="10">10 %</option>
-                                    <option value="20">20 %</option>
-                                    <option value="30">30 %</option>
-                                    <option value="40">40 %</option>
-                                    <option value="50">50 %</option>
-                                    <option value="60">60 %</option>
-                                    <option value="70">70 %</option>
-                                    <option value="80">80 %</option>
-                                    <option value="90">90 %</option>
-                                    <option value="100">100 %</option>
-                              </select>
-                          </div>
-                        </div>
-                    </div>
-            </div>
-    </div>
-    
-    <div class="box box-solid box-primary">
-            <div class="box-header">
-                <h3 class="box-title">Movimiento de suelo</h3>
-            </div>
-            <div class="box-body">
-                    <div class="row">
-                            <div class="col-md-12">
-                              <div class="form-group">
-                                  <label class="control-label">Relleno y Compactación</label>
-                                  <select class="form-control" name="q04" id="q04">
-                                        <option value="" >Seleccione una opción</option>
-                                        <option value="0">0 %</option>
-                                        <option value="10">10 %</option>
-                                        <option value="20">20 %</option>
-                                        <option value="30">30 %</option>
-                                        <option value="40">40 %</option>
-                                        <option value="50">50 %</option>
-                                        <option value="60">60 %</option>
-                                        <option value="70">70 %</option>
-                                        <option value="80">80 %</option>
-                                        <option value="90">90 %</option>
-                                        <option value="100">100 %</option>
-                                  </select>
-                              </div>
-                            </div>
-                        </div>
-            </div>
-        </div>
-        <div class="box box-solid box-primary">
-                <div class="box-header">
-                    <h3 class="box-title">Fundaciones</h3>
-                </div>
-                <div class="box-body">
-                        <div class="row">
-                                <div class="col-md-6">
-                                  <div class="form-group">
-                                      <label class="control-label">Dado de hormigón</label>
-                                      <select class="form-control" name="q05" id="q05">
-                                            <option value="" >Seleccione una opción</option>
-                                            <option value="0">0 %</option>
-                                            <option value="10">10 %</option>
-                                            <option value="20">20 %</option>
-                                            <option value="30">30 %</option>
-                                            <option value="40">40 %</option>
-                                            <option value="50">50 %</option>
-                                            <option value="60">60 %</option>
-                                            <option value="70">70 %</option>
-                                            <option value="80">80 %</option>
-                                            <option value="90">90 %</option>
-                                            <option value="100">100 %</option>
-                                      </select>
-                                  </div>
-                                </div>
-                                <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="control-label">Encadenado de hormigón</label>
-                                            <select class="form-control" name="q06" id="q06">
-                                                    <option value="" >Seleccione una opción</option>
-                                                    <option value="0">0 %</option>
-                                                    <option value="10">10 %</option>
-                                                    <option value="20">20 %</option>
-                                                    <option value="30">30 %</option>
-                                                    <option value="40">40 %</option>
-                                                    <option value="50">50 %</option>
-                                                    <option value="60">60 %</option>
-                                                    <option value="70">70 %</option>
-                                                    <option value="80">80 %</option>
-                                                    <option value="90">90 %</option>
-                                                    <option value="100">100 %</option>
-                                              </select>
-                                        </div>
-                                      </div>
-                            </div>
-                    </div>
-            </div>
+<table id="example" class="table" style="width:100%">
+    <thead>
+        <tr>
+          <th>Rubro</th>
+          <th class="text-center">Un.</th>
+          <th class="text-center">Cantidad</th>
+          <th class="text-center">P. Unitario</th>
+          <th class="text-center">P. Total</th>
+          <th class="text-center">Avance</th>
+        </tr>
+        </thead>
+    <tbody>
+        @php
+            $aux=0;
+        @endphp
+        <form method="post" action="{{ url('save_vivienda') }}">
+        {!! csrf_field() !!}
+        @foreach($rubros as $ru)
+            @if ($ru->category_id !== $aux)
             
-            <div class="box box-solid box-primary">
-                    <div class="box-header">
-                        <h3 class="box-title">Mamposterías</h3>
-                    </div>
-                    <div class="box-body">
-                            <div class="row">
-                                    <div class="col-md-4">
-                                      <div class="form-group">
-                                          <label class="control-label">Panderete de ladrillo de canto</label>
-                                          <select class="form-control" name="q07" id="q07">
-                                                <option value="" >Seleccione una opción</option>
-                                                <option value="0">0 %</option>
-                                                <option value="10">10 %</option>
-                                                <option value="20">20 %</option>
-                                                <option value="30">30 %</option>
-                                                <option value="40">40 %</option>
-                                                <option value="50">50 %</option>
-                                                <option value="60">60 %</option>
-                                                <option value="70">70 %</option>
-                                                <option value="80">80 %</option>
-                                                <option value="90">90 %</option>
-                                                <option value="100">100 %</option>
-                                          </select>
-                                      </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                            <div class="form-group">
-                                                <label class="control-label">Nivelación 0,30</label>
-                                                <select class="form-control" name="q08" id="q08">
-                                                        <option value="" >Seleccione una opción</option>
-                                                        <option value="0">0 %</option>
-                                                        <option value="10">10 %</option>
-                                                        <option value="20">20 %</option>
-                                                        <option value="30">30 %</option>
-                                                        <option value="40">40 %</option>
-                                                        <option value="50">50 %</option>
-                                                        <option value="60">60 %</option>
-                                                        <option value="70">70 %</option>
-                                                        <option value="80">80 %</option>
-                                                        <option value="90">90 %</option>
-                                                        <option value="100">100 %</option>
-                                                  </select>
-                                            </div>
-                                          </div>
-                                    <div class="col-md-4">
-                                      <div class="form-group">
-                                        <label>Elevación de 0,15</label>
-                                        <select class="form-control" name="q09" id="q09">
-                                                <option value="" >Seleccione una opción</option>
-                                                <option value="0">0 %</option>
-                                                <option value="10">10 %</option>
-                                                <option value="20">20 %</option>
-                                                <option value="30">30 %</option>
-                                                <option value="40">40 %</option>
-                                                <option value="50">50 %</option>
-                                                <option value="60">60 %</option>
-                                                <option value="70">70 %</option>
-                                                <option value="80">80 %</option>
-                                                <option value="90">90 %</option>
-                                                <option value="100">100 %</option>
-                                          </select>
-                                      </div>
-                                    </div>
-                                </div>
-                    </div>
-                </div>
-        
+                <tr class="header">
+                    <td class="bg-light-blue-active color-palette">{!! $ru->category_id?$ru->state->categoria->name:"" !!}</td>
+                    <td class="text-center bg-light-blue-active color-palette"></td>
+                    <td class="text-center bg-light-blue-active color-palette"></td>
+                    <td class="text-center bg-light-blue-active color-palette"></td>
+                    <td class="text-center bg-light-blue-active color-palette"></td>
+                    <td class="text-center bg-light-blue-active color-palette"></td> 
+                </tr>
+                @php
+                    $aux=$ru->category_id;
+                @endphp
+            @endif
+              <tr >
+                <td>{!! $ru->item_id?$ru->state->name:"" !!}</td>
+                <td class="text-center">{!! $ru->unidad_id?$ru->unidad->name:"" !!}</td>
+                <td class="text-center">{!! $ru->quantity !!}</td>
+                <td class="text-center">{!! number_format($ru->unit_price,0,'.','.') !!}</td>
+                <td class="text-center">{!! number_format(($ru->unit_price * $ru->quantity),0,'.','.') !!}</td>
+                <td class="text-center">
+                        <select id="wgtmsr" class="js-example-basic-single" name="{!! $ru->item_id !!}">
+                                <option value="0">0% </option>
+                                <option value="10">10% </option>
+                                <option value="20">20% </option>
+                                <option value="30">30% </option>
+                                <option value="40">40% </option>
+                                <option value="50">50% </option>
+                                <option value="60">60% </option>
+                                <option value="70">70% </option>
+                                <option value="80">80% </option>
+                                <option value="90">90% </option>
+                                <option value="100">100% </option>
+                              </select></td>
+              </tr>          
+     @endforeach
+     
+    </tbody>
+    <tfoot>
+         
+    </tfoot>
+</table>
+<div class="form-group row">
+    <div class="offset-sm-3 col-md-12">
+        <button type="submit" class="btn btn-success pull-right">Guardar Datos</button>
+    </div>
+</div>
+</form> 
+@section('css')
+<style>
+#wgtmsr{
+ width:100px;   
+}
 
-        <div class="row no-print">
-              <div class="col-xs-12">
-                <a role="button" data-tab="conectividad" class="btn grabar_emplazamiento btn-lg btn-success pull-right" idea style="margin-right: 5px;">
-                       Guardar / Siguiente
-                </a>
-              </div>
-        </div>
-      
+#wgtmsr option{
+ width:80px;   
+}
+
+</style>
+@endsection   
+
+@section('js')
+
+<script>
+$(document).ready(function() {
+    $('.js-example-basic-single').select2({
+        placeholder: "Avance",
+        
+    });
+});
+</script>
+    
+@endsection
     

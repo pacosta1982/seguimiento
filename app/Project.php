@@ -16,4 +16,7 @@ class Project extends Model
 	    return $status_name[0]->name;
     }
     
+    public function programa() {
+        return $this->hasOne('App\Models\Program','id','program_id');
+    }
 }

@@ -11,6 +11,22 @@
 |
 */
 
+//Mensajes
+Route::group(['prefix' => 'messages'], function () {
+  Route::get('/', ['as' => 'messages.index', 'uses' => 'MessagesController@index']);
+  Route::get('create', ['as' => 'messages.create', 'uses' => 'MessagesController@create']);
+  Route::post('/', ['as' => 'messages.store', 'uses' => 'MessagesController@store']);
+  Route::get('{id}', ['as' => 'messages.show', 'uses' => 'MessagesController@show']);
+  Route::put('{id}', ['as' => 'messages.update', 'uses' => 'MessagesController@update']);
+});
+
+Route::get('qr-code', function () 
+{
+  return QRCode::url('www.senvitat.com')->setSize(10)->png();    
+});
+
+Route::get('generate', 'HomeController@generateDocx');
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -26,6 +42,8 @@ Route::resource('tasks', 'TasksController');
 Route::resource('projects', 'ProjectController');
 Route::resource('proyrubro', 'PlanRubroProyController');
 
+//Generarviviendas
+Route::get('projects/{id}/generarviviendas', 'ProjectController@generarviviendas');
 
 //Route::resource('informes', 'ProjectController');
 
@@ -39,10 +57,14 @@ Route::get('projects/{id}/files', 'ProjectController@files');
 
 //Informes
 Route::get('projects/{id}/informes', 'ReportController@index');
+Route::get('projects/{id}/informes/create', 'ReportController@create');
+Route::post('savereport', 'ReportController@store');
 Route::get('projects/{id}/informes/{idvisita}', 'ReportController@show');
 
 //Viviendas
 Route::get('projects/{id}/informes/{idvisita}/{idvivienda}', 'ViviendaController@index');
+Route::post('save_vivienda', 'ViviendaController@store')->name('save_vivienda');
+
 
 //Fotos
 Route::get('image-gallery', 'ImageGalleryController@index');

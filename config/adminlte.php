@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'title' => 'SIGPH',
+    'title' => 'Seguimiento de Obra',
 
     'title_prefix' => '',
 

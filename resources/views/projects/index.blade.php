@@ -39,7 +39,7 @@
                   <tr>
                     <td><a href="l">{!! $project->id !!}</a></td>
                     <td>{!! $project->name !!}</td>
-                    <td></td>
+                    <td>{!! $project->program_id?$project->programa->name:"" !!}</td>
                     <td></td>
                     <td class="text-center">
                         <span class="label label-success">

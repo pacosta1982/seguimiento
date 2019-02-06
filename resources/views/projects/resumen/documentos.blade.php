@@ -12,7 +12,6 @@
         <tbody>
             @foreach($files as $fu)  
           <tr>
-            
             <td>{!! $fu->title !!}</td>
             <td>{!! $fu->file_path !!}</td>
             <?php $date=date_create($fu->date);  ?>

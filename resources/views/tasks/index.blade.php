@@ -32,7 +32,7 @@
                                 <label>Inspector</label>
                                 <select class="form-control required" name="user_id" id="user_id">
                                     <option value="" >Seleccione una opcion</option>
-                                    @foreach($user as $us)
+                                    @foreach($tecnico as $us)
         
                                     <option value="{{$us->id}}"
                                     >{{$us->name}} </option>

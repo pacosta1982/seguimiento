@@ -17,8 +17,8 @@ class TasksController extends Controller
     {
         $tasks = Task::all();
         $title = "Calendario Tareas";
-        $user = User::all();
-        return view('tasks.index', compact('tasks','title','user'));
+        $tecnico = User::all();
+        return view('tasks.index', compact('tasks','title','tecnico'));
     }
 
     /**

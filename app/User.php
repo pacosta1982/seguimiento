@@ -8,6 +8,7 @@ use Backpack\CRUD\CrudTrait;
 use Laravel\Passport\HasApiTokens;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Cmgmyr\Messenger\Traits\Messagable;
 use Backpack\Base\app\Notifications\ResetPasswordNotification as ResetPasswordNotification;
 
 class User extends Authenticatable
@@ -15,6 +16,7 @@ class User extends Authenticatable
     use Notifiable;
     use CrudTrait; 
     use HasRoles;
+    use Messagable;
     use HasApiTokens, Notifiable;
 
     /**

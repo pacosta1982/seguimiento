@@ -18,7 +18,7 @@
 <div class="box box-info">
         <div class="box-header with-border">
             <h3 class="box-title">Reportes</h3>  
-            <a class="btn btn-primary pull-right" href="{!! action('ProjectController@create') !!}"><i class="fa fa-plus-circle"></i> Agregar</a>
+            <a class="btn btn-primary pull-right" href="{!! action('ReportController@create', ['id'=>$project->id]) !!}"><i class="fa fa-plus-circle"></i> Agregar</a>
         </div>
         <div class="box-body">
             <table id="example" class="table" style="width:100%">
@@ -34,7 +34,7 @@
                   <tr>
                     <td>Informe de Obra N° {!! $inf->num_vista !!}</td>
                     
-                    <td>{!! $inf->fecha_visita !!}</td>
+                    <td>{!!  date('d/m/Y', strtotime($inf->fecha_visita)) !!}</td>
                     <td class="dt-center">
                         <a href="{!! action('ReportController@show', ['id'=>$inf->project_id,'idvisita'=>$inf->id]) !!}" class="announce"> 
                             <button class="btn btn-primary" type="button"> Ver</button>

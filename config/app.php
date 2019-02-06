@@ -178,6 +178,11 @@ return [
         niklasravnsborg\LaravelPdf\PdfServiceProvider::class,
         Barryvdh\Snappy\ServiceProvider::class,
         OwenIt\Auditing\AuditingServiceProvider::class,
+        //LaravelQRCode\Providers\QRCodeServiceProvider::class,
+        Cmgmyr\Messenger\MessengerServiceProvider::class,
+        Creativeorange\Gravatar\GravatarServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
+        SimpleSoftwareIO\QrCode\QrCodeServiceProvider::class
 
     ],
 
@@ -233,6 +238,10 @@ return [
         'PDF' => niklasravnsborg\LaravelPdf\Facades\Pdf::class,
         //'PDF' => Barryvdh\Snappy\Facades\SnappyPdf::class,
         'SnappyImage' => Barryvdh\Snappy\Facades\SnappyImage::class,
+        //'QRCode' => LaravelQRCode\Facades\QRCode::class,
+        'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
+        'Image' => Intervention\Image\Facades\Image::class,
+        'QrCode' => SimpleSoftwareIO\QrCode\Facades\QrCode::class 
 
     ],
 

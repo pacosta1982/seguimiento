@@ -13,3 +13,4 @@
 <li><a href='{{ backpack_url('items') }}'><i class='fa fa-tag'></i> <span>Rubros</span></a></li>
 <li><a href='{{ backpack_url('proyrubro') }}'><i class='fa fa-tag'></i><span>Rubros Proyectos</span></a></li>
 <li><a href='{{ backpack_url('unidad') }}'><i class='fa fa-tag'></i><span>Unidades</span></a></li>
+<li><a href='{{ backpack_url('program') }}'><i class='fa fa-tag'></i> <span>Programas</span></a></li>
