@@ -10,6 +10,7 @@
         "backpack/base": "^0.9.12",
         "backpack/permissionmanager": "^3.12",
         "barryvdh/laravel-snappy": "^0.4.3",
+        "brexis/laravel-workflow": "^1.2",
         "cmgmyr/messenger": "^2.16",
         "cornford/googlmapper": "2.*",
         "creativeorange/gravatar": "~1.0",

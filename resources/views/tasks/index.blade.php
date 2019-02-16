@@ -96,7 +96,7 @@
     <script src="{{asset('js/locale-all.js')}}" charset="UTF-8"></script>
     <script src="{{asset('bootstrap-timepicker/js/bootstrap-timepicker.js')}}"></script>
 
-    bootstrap-timepicker
+   
 
 <script>
     $(document).ready(function() {
